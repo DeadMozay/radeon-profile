@@ -93,19 +93,19 @@ LIBS += -lXrandr -lX11
 # When the translations are ready it is necessary to run "lrelease" in this folder (QtCreator: Tools > External > Linguist > Release)
 # This produces compiled translation files (strings.*.qm), that need to be packaged together with the runnable
 # These can be placed in "/usr/share/radeon-profile/" or in the same folder of the binary (useful for development)
-TRANSLATIONS += translations/strings.it.ts \
-    translations/strings.pl.ts \
-    translations/strings.hr.ts \
-    translations/strings.ru.ts
+TRANSLATIONS += translations/radeon-profile_it.ts \
+    translations/radeon-profile_pl.ts \
+    translations/radeon-profile_hr.ts \
+    translations/radeon-profile_ru.ts
 
 
 DESTDIR = target
 
 DISTFILES += \
-    translations/strings.it.ts \
-    translations/strings.pl.ts \
-    translations/strings.hr.ts \
-    translations/strings.ru.ts
+    translations/radeon-profile_it.ts \
+    translations/radeon-profile_pl.ts \
+    translations/radeon-profile_hr.ts \
+    translations/radeon-profile_ru.ts
 
 
 bin.path = /usr/bin
@@ -117,7 +117,11 @@ desktop.files = extra/radeon-profile.desktop
 icon.path = /usr/share/icons/hicolor/512x512/apps
 icon.files = extra/radeon-profile.png
 
+i18n.path = /usr/share/radeon-profile/translations
+  i18n.files += translations/*.qm
+
 INSTALLS += \
 	bin \
 	desktop \
+	i18n \
 	icon
