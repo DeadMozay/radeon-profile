@@ -11,9 +11,9 @@ int main(int argc, char *argv[])
     QLocale locale;
 
     if (locale.language() != QLocale::Language::English) {
-        if (translator.load(locale, "strings", ".")
-                || translator.load(locale, "strings", ".", QApplication::applicationDirPath())
-                || translator.load(locale, "strings", ".", "/usr/share/radeon-profile"))
+        if (translator.load(locale, "radeon-profile", ".")
+                || translator.load(locale, "radeon-profile", ".", QApplication::applicationDirPath())
+                || translator.load(locale, "radeon-profile", ".", "/usr/share/radeon-profile"))
 
             a.installTranslator(&translator);
         else
